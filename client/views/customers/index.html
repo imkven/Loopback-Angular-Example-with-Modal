@@ -1,0 +1,24 @@
+<section id="create-customer-form">
+  <button ng-click="openCreate()" class="btn btn-primary">
+    <i class="icon-white icon-plus"></i> Create
+  </button>
+</section>
+
+<table class="table">
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Remark</th>
+      <th>&nbsp;</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr ng-repeat="customer in customers">
+      <td ng-bind="customer.name"></td>
+      <td ng-bind="customer.remark"></td>
+      <td>
+        <button ng-click="openEdit(customer.id)" class="btn btn-default">Edit</button>
+      </td>
+    </tr>
+  </tbody>
+</table>
